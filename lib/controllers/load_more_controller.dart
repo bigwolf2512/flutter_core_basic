@@ -10,8 +10,11 @@ abstract class LoadMoreController<D, T extends GraphqlListLoadMoreProvider> {
   ScrollController scrollController = ScrollController();
   late Color primaryColor;
 
-  init({required controller,required Color primaryColor}){
-    this.primaryColor=primaryColor;
+
+  init({required controller,
+    required Color primaryColor}) {
+    this.primaryColor = primaryColor;
+
     if (controller is T) {
       scrollController.addListener(() async {
         if (scrollController.position.pixels ==
@@ -21,7 +24,12 @@ abstract class LoadMoreController<D, T extends GraphqlListLoadMoreProvider> {
       });
     }
   }
-
+  Widget widgetLoading({
+    required bool notData,
+    String? title,
+    String? titleNotData,
+    int? count,
+  });
 
   Widget widgetItemLoadMore(D data, int index);
 
@@ -43,14 +51,13 @@ abstract class LoadMoreController<D, T extends GraphqlListLoadMoreProvider> {
               itemBuilder: (context, index) {
                 if (index == controller.loadMoreItems.value.length) {
                   if (controller.loadMoreItems.value.length >=
-                          (controller.pagination.value.limit ?? 10) ||
+                      (controller.pagination.value.limit ?? 10) ||
                       controller.loadMoreItems.value.isEmpty) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10),
-                      child: WidgetLoading(
+                      child: widgetLoading.call(
                         notData: controller.lastItem,
                         count: controller.loadMoreItems.value.length,
-
                       ),
                     );
                   } else {
@@ -59,9 +66,9 @@ abstract class LoadMoreController<D, T extends GraphqlListLoadMoreProvider> {
                 }
                 if (controller.lastItem == false &&
                     controller.loadMoreItems.value.isEmpty) {
-                  return  Padding(
+                  return Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: WidgetLoading(),
+                    child: widgetLoading.call(notData: false),
                   );
                 }
                 return widgetItemLoadMore.call(
