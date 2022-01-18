@@ -1,0 +1,10 @@
+import '../configs/app_key.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class SPrefCore {
+  SPrefCore({required SharedPreferences p}){
+   prefs =p;
+  }
+  static late SharedPreferences prefs;
+
+}
