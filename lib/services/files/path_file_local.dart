@@ -15,11 +15,11 @@ class PathFileLocals {
       }
       switch (ePathType) {
         case EPathType.Download:
-        // if (Platform.isAndroid) {
+        if (Platform.isAndroid) {
           pathDir = await DownloadsPathProvider.downloadsDirectory;
-          // } else if (Platform.isIOS) {
-          //   pathDir = await getApplicationDocumentsDirectory();
-          // }
+          } else if (Platform.isIOS) {
+            pathDir = await getApplicationDocumentsDirectory();
+          }
           // pathDir = (await getExternalStorageDirectories(
           //         type: StorageDirectory.downloads))
           //     ?.first;

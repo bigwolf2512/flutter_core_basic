@@ -36,6 +36,25 @@ class GraphqlRepository {
         context: context));
   }
 
+
+  Stream<QueryResult> subscription(
+      String subscript,
+      {
+        Map<String, dynamic>? variables,
+        Context? context,
+        String? variablesParams,
+      }) {
+    return graphqlClient.subscribe(SubscriptionOptions(
+        document: gql('''
+            subscription 
+              $subscript
+        '''),
+        variables: variables ?? Map(),
+        fetchPolicy: FetchPolicy.noCache,
+        context: context));
+  }
+
+
   clearCache() {
     graphqlClient.resetStore();
   }

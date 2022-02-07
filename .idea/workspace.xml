@@ -7,7 +7,8 @@
     <list default="true" id="002a6114-9620-40c4-bf76-7a6793aaf511" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/controllers/load_more_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/load_more_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/widget_loading.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/widget_loading.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/graphql/graphql_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/graphql/graphql_repo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/graphql/graphql_subscription.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/graphql/graphql_subscription.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
