@@ -20,9 +20,7 @@ class PathFileLocals {
           } else if (Platform.isIOS) {
             pathDir = await getApplicationDocumentsDirectory();
           }
-          // pathDir = (await getExternalStorageDirectories(
-          //         type: StorageDirectory.downloads))
-          //     ?.first;
+         
           break;
         case EPathType.Pictures:
         // if (Platform.isAndroid) {

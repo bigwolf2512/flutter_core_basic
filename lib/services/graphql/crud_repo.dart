@@ -86,7 +86,12 @@ abstract class CrudRepository<T> extends GraphqlRepository {
     );
     this.handleException(result);
     var data = result.data?["g0"];
-    var listDoc = List<T>.from(data["data"].map((d) => this.fromJson(d)));
+    List<T> listDoc=[];
+    try{
+      listDoc = List<T>.from(data["data"].map((d) => this.fromJson(d)));
+    }catch(error){
+      rethrow;
+    }
     var pagination = Pagination.fromJson(data["pagination"]);
     return PageData(listDoc, data["total"], pagination);
   }
