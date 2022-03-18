@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="002a6114-9620-40c4-bf76-7a6793aaf511" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/services/files/path_file_local.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/files/path_file_local.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/print_log.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/print_log.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/services/graphql/crud_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/graphql/crud_repo.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +14,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/user/.android/avd/Pixel_2_API_22.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[480790df]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>

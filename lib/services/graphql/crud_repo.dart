@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 import 'graphql_repo.dart';
@@ -153,4 +155,6 @@ abstract class CrudRepository<T> extends GraphqlRepository {
           {"messageError": result.exception?.graphqlErrors.first.message});
     }
   }
+
+
 }
