@@ -7,4 +7,7 @@ class SPrefCore {
   }
   static late SharedPreferences prefs;
 
+  static void setSPref({required SharedPreferences p}) {
+    prefs = p;
+  }
 }
