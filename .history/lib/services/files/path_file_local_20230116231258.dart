@@ -1,10 +1,9 @@
 import 'dart:io';
-
-import 'package:downloads_path_provider_28/downloads_path_provider_28.dart';
+import 'package:downloads_path_provider/downloads_path_provider.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-enum EPathType { Cache, Storage, Download, Pictures }
+enum EPathType { Cache, Storage, Download , Pictures}
 
 class PathFileLocals {
   Future<Directory?> getPathLocal({required EPathType ePathType}) async {
@@ -16,16 +15,16 @@ class PathFileLocals {
       }
       switch (ePathType) {
         case EPathType.Download:
-          if (Platform.isAndroid) {
-            pathDir = await DownloadsPathProvider.downloadsDirectory;
+        if (Platform.isAndroid) {
+          pathDir = await DownloadsPathProvider.downloadsDirectory;
           } else if (Platform.isIOS) {
             pathDir = await getApplicationDocumentsDirectory();
           }
-
+         
           break;
         case EPathType.Pictures:
-          // if (Platform.isAndroid) {
-          pathDir = await DownloadsPathProvider.downloadsDirectory;
+        // if (Platform.isAndroid) {
+          pathDir = await DownloadsPathProvider.pictureDirectory;
           // } else if (Platform.isIOS) {
           //   pathDir = await getApplicationDocumentsDirectory();
           // }
@@ -34,9 +33,9 @@ class PathFileLocals {
           //     ?.first;
           break;
         case EPathType.Storage:
-          // if (Platform.isAndroid) {
-          //   pathDir = (await getExternalStorageDirectories())?.first;
-          // } else if (Platform.isIOS) {
+        // if (Platform.isAndroid) {
+        //   pathDir = (await getExternalStorageDirectories())?.first;
+        // } else if (Platform.isIOS) {
           pathDir = await getApplicationDocumentsDirectory();
           // }
           break;

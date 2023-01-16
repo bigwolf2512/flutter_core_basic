@@ -50,7 +50,8 @@ dev_dependencies:
 
   imgur:
     git: https://github.com/ctymcom/Imgur.git
-  downloads_path_provider_28:
+  downloads_path_provider:
+    git: https://github.com/tranhieudevvietnam/downloads_path_provider.git
 
 
 # For information on the generic Dart part of this file, see the
